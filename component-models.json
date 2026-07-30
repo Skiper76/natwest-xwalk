@@ -136,8 +136,52 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Purple tint",
+            "value": "purple-tint"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-help-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Body",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "accordion-legal-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Body",
+        "valueType": "string"
       }
     ]
   },
@@ -190,6 +234,62 @@
     ]
   },
   {
+    "id": "header",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Layout",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Brand left (default)",
+            "value": ""
+          },
+          {
+            "name": "Brand right",
+            "value": "brand-right"
+          },
+          {
+            "name": "Brand center",
+            "value": "brand-center"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hero-purple",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
@@ -212,6 +312,44 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "search-faq",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "source",
+        "label": "Search Index (optional, defaults to query-index.json)"
+      }
+    ]
+  },
+  {
+    "id": "tabs-tracker-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Body",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "widget",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Widget Reference"
       }
     ]
   }

@@ -1,4 +1,54 @@
 /* stylelint-disable max-line-length */
+
+/* NatWest brand fonts */
+@font-face {
+  font-family: knileblack;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/knile-black-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: knilebold;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/knile-bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: knilesemibold;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/knile-semibold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: RNHouseSansRegular;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/RNHouseSansW01Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: RNHouseSansBold;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/RNHouseSansW01Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: RNHouseSansLight;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/RNHouseSansW01-Light.woff2') format('woff2');
+}
+
 @font-face {
   font-family: roboto-condensed;
   font-style: normal;

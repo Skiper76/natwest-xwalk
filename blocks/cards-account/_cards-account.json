@@ -1,0 +1,28 @@
+{
+  "definitions": [
+    {
+      "title": "Cards Account",
+      "id": "cards-account",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Cards Account",
+              "filter": "cards-account"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [],
+  "filters": [
+    {
+      "id": "cards-account",
+      "components": [
+        "card"
+      ]
+    }
+  ]
+}

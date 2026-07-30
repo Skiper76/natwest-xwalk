@@ -164,6 +164,12 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
+  // Point the brand logo at the repo-hosted asset so it resolves on every page/env.
+  // Target any img in the brand (there is only the logo); the original content src
+  // may be a broken/relative path or "about:error", so we don't filter on it.
+  const brandLogo = navBrand.querySelector('img');
+  if (brandLogo) brandLogo.src = '/icons/natwest-logo.svg';
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);

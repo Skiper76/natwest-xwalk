@@ -33,6 +33,14 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Purple tint",
+              "value": "purple-tint"
+            },
+            {
+              "name": "Dark",
+              "value": "dark"
             }
           ]
         }
@@ -48,9 +56,20 @@
         "button",
         "title",
         "hero",
+        "hero-purple",
         "cards",
+        "cards-account",
+        "cards-cover",
+        "cards-icon",
+        "carousel-cards",
         "columns",
-        "fragment"
+        "columns-feature",
+        "fragment",
+        "accordion-help",
+        "accordion-legal",
+        "tabs-tracker",
+        "search-faq",
+        "widget"
       ]
     }
   ]

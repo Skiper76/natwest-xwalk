@@ -13,15 +13,68 @@
       "button",
       "title",
       "hero",
+      "hero-purple",
       "cards",
+      "cards-account",
+      "cards-cover",
+      "cards-icon",
+      "carousel-cards",
       "columns",
-      "fragment"
+      "columns-feature",
+      "fragment",
+      "accordion-help",
+      "accordion-legal",
+      "tabs-tracker",
+      "search-faq",
+      "widget"
+    ]
+  },
+  {
+    "id": "accordion-help",
+    "components": [
+      "accordion-help-item"
+    ]
+  },
+  {
+    "id": "accordion-legal",
+    "components": [
+      "accordion-legal-item"
+    ]
+  },
+  {
+    "id": "cards-account",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-cover",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-icon",
+    "components": [
+      "card"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "carousel-cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns-feature",
+    "components": [
+      "column"
     ]
   },
   {
@@ -37,6 +90,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs-tracker",
+    "components": [
+      "tabs-tracker-item"
     ]
   }
 ]
