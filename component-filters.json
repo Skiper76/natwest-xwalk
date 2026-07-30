@@ -44,19 +44,19 @@
   {
     "id": "cards-account",
     "components": [
-      "card"
+      "cards-account-item"
     ]
   },
   {
     "id": "cards-cover",
     "components": [
-      "card"
+      "cards-cover-item"
     ]
   },
   {
     "id": "cards-icon",
     "components": [
-      "card"
+      "cards-icon-item"
     ]
   },
   {
@@ -68,7 +68,7 @@
   {
     "id": "carousel-cards",
     "components": [
-      "card"
+      "carousel-cards-item"
     ]
   },
   {

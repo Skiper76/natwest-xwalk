@@ -71,6 +71,12 @@
   color: #fff;
 }
 
+/* "Dark purple" style option: same deep purple as the no-image variant,
+   but author-selectable even when an image is present. */
+.hero-purple.dark {
+  background-color: var(--nw-purple, #3c1053);
+}
+
 @media (width >= 900px) {
   .hero-purple {
     display: grid;
@@ -91,5 +97,15 @@
   .hero-purple .hero-purple-image {
     order: 2;
     text-align: right;
+  }
+
+  /* "Image left" style option: swap the two columns */
+  .hero-purple.image-left .hero-purple-content {
+    order: 2;
+  }
+
+  .hero-purple.image-left .hero-purple-image {
+    order: 1;
+    text-align: left;
   }
 }

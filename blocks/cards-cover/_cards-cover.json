@@ -14,14 +14,49 @@
           }
         }
       }
+    },
+    {
+      "title": "Cards Cover Item",
+      "id": "cards-cover-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Cards Cover Item",
+              "model": "cards-cover-item"
+            }
+          }
+        }
+      }
     }
   ],
-  "models": [],
+  "models": [
+    {
+      "id": "cards-cover-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
   "filters": [
     {
       "id": "cards-cover",
       "components": [
-        "card"
+        "cards-cover-item"
       ]
     }
   ]

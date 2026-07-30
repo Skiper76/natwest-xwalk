@@ -14,14 +14,49 @@
           }
         }
       }
+    },
+    {
+      "title": "Carousel Cards Item",
+      "id": "carousel-cards-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Carousel Cards Item",
+              "model": "carousel-cards-item"
+            }
+          }
+        }
+      }
     }
   ],
-  "models": [],
+  "models": [
+    {
+      "id": "carousel-cards-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
   "filters": [
     {
       "id": "carousel-cards",
       "components": [
-        "card"
+        "carousel-cards-item"
       ]
     }
   ]

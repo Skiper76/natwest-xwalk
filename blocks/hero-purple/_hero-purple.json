@@ -40,6 +40,27 @@
           "value": "",
           "label": "Text",
           "valueType": "string"
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "value": "",
+          "label": "Style",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Default (image right)",
+              "value": ""
+            },
+            {
+              "name": "Image left",
+              "value": "image-left"
+            },
+            {
+              "name": "Dark purple",
+              "value": "dark"
+            }
+          ]
         }
       ]
     }
