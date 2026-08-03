@@ -41,6 +41,10 @@
             {
               "name": "Dark",
               "value": "dark"
+            },
+            {
+              "name": "With sidebar",
+              "value": "with-sidebar"
             }
           ]
         }
@@ -70,7 +74,9 @@
         "tabs-tracker",
         "search-faq",
         "widget",
-        "articles"
+        "articles",
+        "article-byline",
+        "toc"
       ]
     }
   ]

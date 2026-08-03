@@ -144,6 +144,10 @@
           {
             "name": "Dark",
             "value": "dark"
+          },
+          {
+            "name": "With sidebar",
+            "value": "with-sidebar"
           }
         ]
       }
@@ -186,12 +190,36 @@
     ]
   },
   {
+    "id": "article-byline",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "author",
+        "label": "Author"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "date",
+        "label": "Date",
+        "description": "e.g. 3 August 2026"
+      }
+    ]
+  },
+  {
     "id": "articles",
     "fields": [
       {
         "component": "aem-content",
         "name": "path",
         "label": "Articles Path (optional, defaults to /articles)"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "limit",
+        "label": "Limit (optional, e.g. 3 for related articles; blank shows all)"
       }
     ]
   },
@@ -447,6 +475,18 @@
         "value": "",
         "label": "Body",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "toc",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": "On this page"
       }
     ]
   },

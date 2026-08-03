@@ -37,8 +37,10 @@ function renderArticle(article) {
 }
 
 export default async function decorate(block) {
-  const link = block.querySelector('a[href]');
+  const [pathRow, limitRow] = block.children;
+  const link = pathRow ? pathRow.querySelector('a[href]') : null;
   const path = link ? new URL(link.href).pathname : '/articles';
+  const limit = limitRow ? parseInt(limitRow.textContent.trim(), 10) : 0;
   block.textContent = '';
 
   const list = document.createElement('ul');
@@ -46,9 +48,12 @@ export default async function decorate(block) {
   block.append(list);
 
   const data = await fetchIndex(`${window.hlx.codeBasePath}/query-index.json`);
-  const articles = data
-    .filter((entry) => entry.path.startsWith(`${path}/`))
+  const currentPath = window.location.pathname;
+  let articles = data
+    .filter((entry) => entry.path.startsWith(`${path}/`) && entry.path !== currentPath)
     .sort((a, b) => (b.lastModified || 0) - (a.lastModified || 0));
+
+  if (limit) articles = articles.slice(0, limit);
 
   if (!articles.length) {
     const empty = document.createElement('li');

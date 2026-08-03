@@ -359,3 +359,38 @@ main .section.dark a:any-link {
   color: var(--background-color);
   text-decoration: underline;
 }
+
+/* with-sidebar: two-column article layout, main content + toc/related-articles rail */
+main .section.with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+main .section.with-sidebar > .toc-wrapper,
+main .section.with-sidebar > .articles-wrapper {
+  grid-column: 1;
+}
+
+@media (width >= 900px) {
+  main .section.with-sidebar {
+    grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+    gap: 0 48px;
+    align-items: start;
+  }
+
+  main .section.with-sidebar > .default-content-wrapper {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  main .section.with-sidebar > .toc-wrapper {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  main .section.with-sidebar > .articles-wrapper {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
