@@ -21,17 +21,19 @@
       "id": "article-byline",
       "fields": [
         {
-          "component": "text",
+          "component": "richtext",
           "valueType": "string",
           "name": "author",
-          "label": "Author"
+          "label": "Author",
+          "value": ""
         },
         {
-          "component": "text",
+          "component": "richtext",
           "valueType": "string",
           "name": "date",
           "label": "Date",
-          "description": "e.g. 3 August 2026"
+          "description": "e.g. 3 August 2026",
+          "value": ""
         }
       ]
     }

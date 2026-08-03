@@ -193,17 +193,19 @@
     "id": "article-byline",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
         "name": "author",
-        "label": "Author"
+        "label": "Author",
+        "value": ""
       },
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
         "name": "date",
         "label": "Date",
-        "description": "e.g. 3 August 2026"
+        "description": "e.g. 3 August 2026",
+        "value": ""
       }
     ]
   },
@@ -216,10 +218,11 @@
         "label": "Articles Path (optional, defaults to /articles)"
       },
       {
-        "component": "text",
-        "valueType": "number",
+        "component": "richtext",
+        "valueType": "string",
         "name": "limit",
-        "label": "Limit (optional, e.g. 3 for related articles; blank shows all)"
+        "label": "Limit (optional, e.g. 3 for related articles; blank shows all)",
+        "value": ""
       }
     ]
   },
@@ -482,7 +485,7 @@
     "id": "toc",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
         "name": "heading",
         "label": "Heading",

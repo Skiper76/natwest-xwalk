@@ -21,7 +21,7 @@
       "id": "toc",
       "fields": [
         {
-          "component": "text",
+          "component": "richtext",
           "valueType": "string",
           "name": "heading",
           "label": "Heading",

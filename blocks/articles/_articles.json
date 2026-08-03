@@ -26,10 +26,11 @@
           "label": "Articles Path (optional, defaults to /articles)"
         },
         {
-          "component": "text",
-          "valueType": "number",
+          "component": "richtext",
+          "valueType": "string",
           "name": "limit",
-          "label": "Limit (optional, e.g. 3 for related articles; blank shows all)"
+          "label": "Limit (optional, e.g. 3 for related articles; blank shows all)",
+          "value": ""
         }
       ]
     }
