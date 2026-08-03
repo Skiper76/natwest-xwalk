@@ -186,6 +186,16 @@
     ]
   },
   {
+    "id": "articles",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "path",
+        "label": "Articles Path (optional, defaults to /articles)"
+      }
+    ]
+  },
+  {
     "id": "cards-account-item",
     "fields": [
       {

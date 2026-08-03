@@ -1,0 +1,32 @@
+.mortgage-calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+.mortgage-calculator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mortgage-calculator-field label {
+  font-weight: bold;
+}
+
+.mortgage-calculator-field input {
+  padding: 8px 12px;
+  border: 1px solid var(--dark-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.mortgage-calculator-submit {
+  align-self: flex-start;
+}
+
+.mortgage-calculator-result {
+  font-weight: bold;
+  min-height: 1.5em;
+}
