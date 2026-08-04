@@ -77,7 +77,8 @@
         "articles",
         "article-byline",
         "table-of-contents",
-        "breadcrumbs"
+        "breadcrumbs",
+        "quote"
       ]
     }
   ]
