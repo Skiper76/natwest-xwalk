@@ -29,7 +29,8 @@
       "widget",
       "articles",
       "article-byline",
-      "table-of-contents"
+      "table-of-contents",
+      "breadcrumbs"
     ]
   },
   {

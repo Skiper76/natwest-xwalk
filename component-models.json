@@ -227,6 +227,18 @@
     ]
   },
   {
+    "id": "breadcrumbs",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "rootLabel",
+        "label": "Home label",
+        "value": "Home"
+      }
+    ]
+  },
+  {
     "id": "cards-account-item",
     "fields": [
       {
