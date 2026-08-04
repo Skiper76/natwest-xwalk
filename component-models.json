@@ -146,6 +146,10 @@
             "value": "dark"
           },
           {
+            "name": "Swoosh",
+            "value": "swoosh"
+          },
+          {
             "name": "With sidebar",
             "value": "with-sidebar"
           }

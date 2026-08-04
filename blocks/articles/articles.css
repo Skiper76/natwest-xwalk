@@ -17,6 +17,20 @@
   .articles-list {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .articles-related .articles-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1200px) {
+  .articles-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .articles-related .articles-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .articles-list > li {
@@ -58,6 +72,24 @@
   color: var(--dark-color);
 }
 
+.articles-card-body p.articles-card-date {
+  margin-top: 8px;
+  font-size: var(--body-font-size-s);
+  color: var(--dark-color);
+}
+
+.articles-count {
+  margin: 0 0 24px;
+  color: var(--dark-color);
+}
+
 .articles-empty {
   color: var(--dark-color);
+}
+
+.articles-all-link {
+  display: inline-block;
+  margin-top: 24px;
+  font-weight: 700;
+  text-decoration: underline;
 }

@@ -274,13 +274,13 @@ main img {
   width: 100%;
 }
 
-/* standalone default-content image (e.g. an article's intro/hero image) */
+/* standalone default-content image (e.g. an inline illustration) - kept
+   modest since the reference article template doesn't use a hero image */
 main .section > div > picture > img,
 main .section > div > p > picture > img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: auto;
   border-radius: 12px;
 }
 
@@ -362,11 +362,15 @@ main .section.purple-tint > div:not([class*="-container"]) p.button-wrapper ~ p.
   transform: none;
 }
 
-main .section.dark {
-  background-color: var(--dark-color);
+main .section.dark,
+main .section.swoosh {
   color: var(--background-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.dark {
+  background-color: var(--dark-color);
 }
 
 main .section.dark h1,
@@ -374,34 +378,84 @@ main .section.dark h2,
 main .section.dark h3,
 main .section.dark h4,
 main .section.dark h5,
-main .section.dark h6 {
+main .section.dark h6,
+main .section.swoosh h1,
+main .section.swoosh h2,
+main .section.swoosh h3,
+main .section.swoosh h4,
+main .section.swoosh h5,
+main .section.swoosh h6 {
   color: var(--background-color);
 }
 
-main .section.dark a:any-link {
+main .section.dark a:any-link,
+main .section.swoosh a:any-link {
   color: var(--background-color);
   text-decoration: underline;
 }
 
-/* with-sidebar: article body + a toc/related-articles rail.
-   The body is split across several sibling wrappers (quote blocks break up
-   the default-content run), so a grid with row-spanning doesn't work here -
-   every wrapper would land in the same cell. Floating the rail instead lets
-   body content wrap around it naturally regardless of how many pieces it's
-   split into. The rail must come early in authoring order (right after the
-   intro) so there's body content left to wrap around it. */
-@media (width >= 900px) {
-  main .section.with-sidebar::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
+/* swoosh: purple banner with a hand-drawn pink underline accent below the heading,
+   e.g. "Our brands" - see brand.css for --nw-pink-accent */
+main .section.swoosh {
+  background-color: var(--nw-purple-mid);
+}
 
-  main .section.with-sidebar > .table-of-contents-wrapper,
-  main .section.with-sidebar > .articles-wrapper {
-    float: right;
-    clear: right;
-    width: 300px;
-    margin: 0 0 32px 48px;
-  }
+main .section.swoosh h1,
+main .section.swoosh h2,
+main .section.swoosh h3,
+main .section.swoosh h4,
+main .section.swoosh h5,
+main .section.swoosh h6 {
+  position: relative;
+  display: inline-block;
+}
+
+main .section.swoosh h1::after,
+main .section.swoosh h2::after,
+main .section.swoosh h3::after,
+main .section.swoosh h4::after,
+main .section.swoosh h5::after,
+main .section.swoosh h6::after {
+  content: '';
+  position: absolute;
+  left: -3%;
+  bottom: -0.3em;
+  width: 106%;
+  height: 0.18em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 30' preserveAspectRatio='none'%3E%3Cpath d='M6,15 C100,3 200,23 294,11' stroke='%23f0195b' stroke-width='17' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* with-sidebar: single-column article body (matches natwest.com's own article
+   template - no floating rail, no hero image; the toc sits inline right
+   after the byline, and related-articles is a full-width card grid at the
+   end). Keeping the style name for backwards compatibility with authored
+   content, but it's really just "article" styling now. */
+main .section.with-sidebar {
+  max-width: 820px;
+  margin: 40px auto;
+}
+
+main .section.with-sidebar + .section {
+  max-width: 820px;
+  margin: 64px auto 40px;
+}
+
+main .section.with-sidebar h3 {
+  margin-top: 1.6em;
+  font-family: var(--body-font-family);
+  font-size: var(--heading-font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+main .section.with-sidebar .table-of-contents {
+  margin: 24px 0 40px;
+}
+
+main .section.with-sidebar > .default-content-wrapper p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
