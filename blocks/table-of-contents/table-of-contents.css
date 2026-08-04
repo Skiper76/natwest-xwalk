@@ -1,4 +1,4 @@
-.toc {
+.table-of-contents {
   position: sticky;
   top: 24px;
   padding: 20px 24px;
@@ -6,12 +6,12 @@
   border-radius: 12px;
 }
 
-.toc-heading {
+.table-of-contents .toc-heading {
   margin: 0 0 12px;
   font-weight: 700;
 }
 
-.toc ul {
+.table-of-contents ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -20,13 +20,13 @@
   gap: 8px;
 }
 
-.toc a {
+.table-of-contents a {
   color: var(--text-color);
   text-decoration: none;
 }
 
-.toc a:hover,
-.toc a:focus {
+.table-of-contents a:hover,
+.table-of-contents a:focus {
   color: var(--link-color);
   text-decoration: underline;
 }

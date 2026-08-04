@@ -82,10 +82,23 @@ p,
 dl,
 ol,
 ul,
-pre,
-blockquote {
+pre {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
+}
+
+blockquote {
+  margin: 32px 0;
+  padding: 4px 0 4px 24px;
+  border-left: 4px solid var(--link-color);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-s);
+  font-style: italic;
+  color: var(--dark-color);
+}
+
+blockquote p {
+  margin: 0;
 }
 
 code,
@@ -261,6 +274,16 @@ main img {
   width: 100%;
 }
 
+/* standalone default-content image (e.g. an article's intro/hero image) */
+main .section > div > picture > img,
+main .section > div > p > picture > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 /* sections */
 main > .section {
   margin: 40px 0;
@@ -367,7 +390,7 @@ main .section.with-sidebar {
   gap: 32px;
 }
 
-main .section.with-sidebar > .toc-wrapper,
+main .section.with-sidebar > .table-of-contents-wrapper,
 main .section.with-sidebar > .articles-wrapper {
   grid-column: 1;
 }
@@ -384,7 +407,7 @@ main .section.with-sidebar > .articles-wrapper {
     grid-row: 1 / span 2;
   }
 
-  main .section.with-sidebar > .toc-wrapper {
+  main .section.with-sidebar > .table-of-contents-wrapper {
     grid-column: 2;
     grid-row: 1;
   }
