@@ -464,6 +464,18 @@
     ]
   },
   {
+    "id": "table-of-contents",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": "On this page"
+      }
+    ]
+  },
+  {
     "id": "tabs-tracker-item",
     "fields": [
       {
@@ -478,18 +490,6 @@
         "value": "",
         "label": "Body",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "toc",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "heading",
-        "label": "Heading",
-        "value": "On this page"
       }
     ]
   },
