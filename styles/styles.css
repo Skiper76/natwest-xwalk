@@ -383,37 +383,25 @@ main .section.dark a:any-link {
   text-decoration: underline;
 }
 
-/* with-sidebar: two-column article layout, main content + toc/related-articles rail */
-main .section.with-sidebar {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-}
-
-main .section.with-sidebar > .table-of-contents-wrapper,
-main .section.with-sidebar > .articles-wrapper {
-  grid-column: 1;
-}
-
+/* with-sidebar: article body + a toc/related-articles rail.
+   The body is split across several sibling wrappers (quote blocks break up
+   the default-content run), so a grid with row-spanning doesn't work here -
+   every wrapper would land in the same cell. Floating the rail instead lets
+   body content wrap around it naturally regardless of how many pieces it's
+   split into. The rail must come early in authoring order (right after the
+   intro) so there's body content left to wrap around it. */
 @media (width >= 900px) {
-  main .section.with-sidebar {
-    grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
-    gap: 0 48px;
-    align-items: start;
+  main .section.with-sidebar::after {
+    content: '';
+    display: table;
+    clear: both;
   }
 
-  main .section.with-sidebar > .default-content-wrapper {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-  }
-
-  main .section.with-sidebar > .table-of-contents-wrapper {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
+  main .section.with-sidebar > .table-of-contents-wrapper,
   main .section.with-sidebar > .articles-wrapper {
-    grid-column: 2;
-    grid-row: 2;
+    float: right;
+    clear: right;
+    width: 300px;
+    margin: 0 0 32px 48px;
   }
 }

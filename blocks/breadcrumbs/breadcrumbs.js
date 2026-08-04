@@ -16,15 +16,19 @@ export default async function decorate(block) {
   const rootLabel = block.textContent.trim() || 'Home';
   block.textContent = '';
 
-  const { pathname } = window.location;
-  const segments = pathname.split('/').filter(Boolean);
+  // Strip a trailing .html (present when viewed in the authoring canvas) and
+  // only keep the last two meaningful segments (immediate section + current
+  // page), ignoring any content-root path segments before them.
+  const cleanPathname = window.location.pathname.replace(/\.html$/, '');
+  const allSegments = cleanPathname.split('/').filter(Boolean);
+  const segments = allSegments.slice(-2);
+
   const data = segments.length ? await fetchIndex() : [];
 
   const crumbs = [{ path: '/', label: rootLabel }];
-  let accumulated = '';
-  segments.forEach((segment) => {
-    accumulated += `/${segment}`;
-    crumbs.push({ path: accumulated, label: titleForPath(accumulated, data) });
+  segments.forEach((segment, index) => {
+    const path = `/${segments.slice(0, index + 1).join('/')}`;
+    crumbs.push({ path, label: titleForPath(path, data) });
   });
 
   const nav = document.createElement('nav');
