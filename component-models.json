@@ -152,6 +152,18 @@
           {
             "name": "With sidebar",
             "value": "with-sidebar"
+          },
+          {
+            "name": "Disclaimer",
+            "value": "disclaimer"
+          },
+          {
+            "name": "Checklist",
+            "value": "checklist"
+          },
+          {
+            "name": "Guides",
+            "value": "guides"
           }
         ]
       }
@@ -484,6 +496,24 @@
         "name": "author",
         "label": "Author",
         "value": ""
+      }
+    ]
+  },
+  {
+    "id": "ranking-chart-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "name",
+        "value": "",
+        "label": "Name",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "percentage",
+        "label": "Percentage"
       }
     ]
   },

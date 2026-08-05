@@ -12,6 +12,7 @@
   --nw-grey-tint: #f2f2f8;       /* light grey surface */
   --nw-grey-text: #646068;       /* body text */
   --nw-pink-accent: #f0195b;     /* swoosh underline accent */
+  --nw-orange-accent: #c33c21;   /* ranking-chart bars / regulatory disclosures */
 
   /* semantic colors */
   --background-color: #fff;

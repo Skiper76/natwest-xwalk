@@ -31,7 +31,8 @@
       "article-byline",
       "table-of-contents",
       "breadcrumbs",
-      "quote"
+      "quote",
+      "ranking-chart"
     ]
   },
   {
@@ -95,6 +96,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "ranking-chart",
+    "components": [
+      "ranking-chart-item"
     ]
   },
   {

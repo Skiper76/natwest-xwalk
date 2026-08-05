@@ -427,6 +427,72 @@ main .section.swoosh h6::after {
   background-size: 100% 100%;
 }
 
+/* disclaimer: thin, dark, small-print regulatory notice band */
+main .section.disclaimer {
+  margin: 0;
+  padding: 12px 0;
+  background-color: var(--dark-color);
+}
+
+main .section.disclaimer p {
+  margin: 0;
+  color: var(--background-color);
+  font-size: var(--body-font-size-s);
+  text-align: center;
+}
+
+/* checklist: turns a plain <ul> into a tick list */
+main .section.checklist ul {
+  list-style: none;
+  margin: 0.8em 0;
+  padding: 0;
+}
+
+main .section.checklist li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 28px;
+}
+
+main .section.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--nw-purple-mid, var(--link-color));
+  font-weight: 700;
+}
+
+/* guides: two link-list columns, each with a colour accent rule above its heading */
+main .section.guides .columns > div {
+  display: grid;
+  gap: 32px;
+}
+
+@media (width >= 600px) {
+  main .section.guides .columns > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+main .section.guides .columns > div > div {
+  padding-top: 12px;
+  border-top: 3px solid var(--nw-pink-accent, var(--link-color));
+}
+
+main .section.guides .columns > div > div:nth-child(2) {
+  border-top-color: var(--nw-orange-accent, var(--dark-color));
+}
+
+main .section.guides ul {
+  list-style: none;
+  margin: 0.5em 0 0;
+  padding: 0;
+}
+
+main .section.guides li {
+  margin-bottom: 12px;
+}
+
 /* with-sidebar: single-column article body (matches natwest.com's own article
    template - no floating rail, no hero image; the toc sits inline right
    after the byline, and related-articles is a full-width card grid at the

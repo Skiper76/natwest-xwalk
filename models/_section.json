@@ -49,6 +49,18 @@
             {
               "name": "With sidebar",
               "value": "with-sidebar"
+            },
+            {
+              "name": "Disclaimer",
+              "value": "disclaimer"
+            },
+            {
+              "name": "Checklist",
+              "value": "checklist"
+            },
+            {
+              "name": "Guides",
+              "value": "guides"
             }
           ]
         }
@@ -82,7 +94,8 @@
         "article-byline",
         "table-of-contents",
         "breadcrumbs",
-        "quote"
+        "quote",
+        "ranking-chart"
       ]
     }
   ]
