@@ -70,6 +70,11 @@
   border-top: 0;
 }
 
+/* Never show a divider immediately after the icon, whatever the first element is */
+.cards-icon .cards-icon-card-body > :first-child {
+  border-top: 0;
+}
+
 /* Sub-links: clean text links with a chevron, not big pill buttons */
 .cards-icon .cards-icon-card-body p a:any-link,
 .cards-icon .cards-icon-card-body p a.button:any-link {
