@@ -1,0 +1,53 @@
+{
+  "definitions": [
+    {
+      "title": "CF Card",
+      "id": "cf-card",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "CF Card",
+              "filter": "cf-card"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "cf-card",
+      "fields": [
+        {
+          "component": "aem-content",
+          "name": "reference",
+          "label": "Content Fragment"
+        },
+        {
+          "component": "select",
+          "name": "displayMode",
+          "label": "Display as",
+          "value": "card",
+          "options": [
+            {
+              "name": "Card",
+              "value": "card"
+            },
+            {
+              "name": "Raw JSON",
+              "value": "json"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "cf-card",
+      "components": []
+    }
+  ]
+}

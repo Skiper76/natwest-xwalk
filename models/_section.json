@@ -95,7 +95,8 @@
         "table-of-contents",
         "breadcrumbs",
         "quote",
-        "ranking-chart"
+        "ranking-chart",
+        "cf-card"
       ]
     }
   ]

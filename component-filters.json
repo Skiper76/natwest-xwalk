@@ -32,7 +32,8 @@
       "table-of-contents",
       "breadcrumbs",
       "quote",
-      "ranking-chart"
+      "ranking-chart",
+      "cf-card"
     ]
   },
   {
@@ -76,6 +77,10 @@
     "components": [
       "carousel-cards-item"
     ]
+  },
+  {
+    "id": "cf-card",
+    "components": []
   },
   {
     "id": "columns-feature",

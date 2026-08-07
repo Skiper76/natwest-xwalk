@@ -350,6 +350,32 @@
     ]
   },
   {
+    "id": "cf-card",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Content Fragment"
+      },
+      {
+        "component": "select",
+        "name": "displayMode",
+        "label": "Display as",
+        "value": "card",
+        "options": [
+          {
+            "name": "Card",
+            "value": "card"
+          },
+          {
+            "name": "Raw JSON",
+            "value": "json"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
