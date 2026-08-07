@@ -2,12 +2,41 @@
  * CF Card Block
  * Renders a Content Fragment (Product Card model) referenced by the
  * "reference" field, either as a styled card or as its raw JSON.
- * Fetching a Content Fragment's JSON requires an authenticated AEM
- * session (same-origin request with credentials) — this only resolves
- * when viewed on the author host or through Universal Editor, not on an
- * anonymous public request, unless the fragment is exposed for
- * anonymous read on the publish tier.
+ * Queries the "natwest" GraphQL endpoint (/content/cq:graphql/global/endpoint)
+ * for the fragment at that path. This is a same-origin, credentialed
+ * request, so it only resolves when viewed through an authenticated AEM
+ * session (author host / Universal Editor) today — anonymous public
+ * queries need the GraphQL path allow-listed on the publish dispatcher.
  */
+
+const GRAPHQL_ENDPOINT = '/content/cq:graphql/global/endpoint.json';
+
+async function fetchProductCard(path) {
+  const query = `{
+    productCardList(filter: { _path: { _expressions: [{ value: "${path}", _operator: EQUALS }] } }) {
+      items {
+        _path
+        title
+        description
+        image { ... on ImageRef { _path } }
+        linkHref
+        linkText
+      }
+    }
+  }`;
+  const res = await fetch(GRAPHQL_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
+    body: JSON.stringify({ query }),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const { data, errors } = await res.json();
+  if (errors?.length) throw new Error(errors[0].message);
+  const [item] = data?.productCardList?.items || [];
+  if (!item) throw new Error(`No content fragment found at ${path}`);
+  return item;
+}
 
 function renderJson(block, data) {
   const pre = document.createElement('pre');
@@ -23,11 +52,13 @@ function renderCard(block, data) {
   const card = document.createElement('div');
   card.className = 'cf-card-item';
 
-  if (image) {
+  // eslint-disable-next-line no-underscore-dangle
+  const imagePath = image?._path;
+  if (imagePath) {
     const imageWrapper = document.createElement('div');
     imageWrapper.className = 'cf-card-image';
     const img = document.createElement('img');
-    img.src = image;
+    img.src = imagePath;
     img.alt = '';
     img.loading = 'lazy';
     imageWrapper.append(img);
@@ -70,19 +101,15 @@ export default async function decorate(block) {
     return;
   }
 
-  let json;
+  let data;
   try {
-    const res = await fetch(`${path}.infinity.json`, { credentials: 'include' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    json = await res.json();
+    data = await fetchProductCard(path);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to load content fragment', path, error);
     block.textContent = 'Unable to load content fragment.';
     return;
   }
-
-  const data = json['jcr:content']?.data?.master || {};
 
   if (displayMode === 'json') {
     renderJson(block, data);
