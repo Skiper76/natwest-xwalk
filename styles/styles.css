@@ -274,13 +274,20 @@ main img {
   width: 100%;
 }
 
-/* standalone default-content image (e.g. an inline illustration) - kept
-   modest since the reference article template doesn't use a hero image */
+/* standalone default-content image (e.g. an article's intro/hero image).
+   When a section mixes a block (like breadcrumbs) with default content,
+   Edge Delivery wraps each run in its own *-wrapper div, so the image can
+   sit one level deeper than a section with only default content - cover
+   both cases rather than letting the image render at its full intrinsic
+   height (which can dwarf the rest of the page). */
 main .section > div > picture > img,
-main .section > div > p > picture > img {
+main .section > div > p > picture > img,
+main .section > div > .default-content-wrapper > picture > img,
+main .section > div > .default-content-wrapper > p > picture > img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 12px;
 }
 
