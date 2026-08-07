@@ -504,14 +504,14 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "name",
+        "name": "bankName",
         "value": "",
         "label": "Name",
         "valueType": "string"
       },
       {
-        "component": "text",
-        "valueType": "number",
+        "component": "richtext",
+        "valueType": "string",
         "name": "percentage",
         "label": "Percentage"
       }
