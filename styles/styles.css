@@ -533,3 +533,27 @@ main .section.with-sidebar > .default-content-wrapper p {
   text-justify: inter-word;
   hyphens: auto;
 }
+
+/* cards-grid: lay out multiple standalone cards (e.g. several cf-card
+   blocks) side by side, same width, wrapping on narrow screens. */
+main .section.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+main .section.cards-grid > h1,
+main .section.cards-grid > h2,
+main .section.cards-grid > h3 {
+  flex: 1 0 100%;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+main .section.cards-grid > div {
+  flex: 1 1 257px;
+}
+
+main .section.cards-grid .cf-card {
+  max-width: none;
+  height: 100%;
+}

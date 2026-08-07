@@ -61,6 +61,10 @@
             {
               "name": "Guides",
               "value": "guides"
+            },
+            {
+              "name": "Cards grid",
+              "value": "cards-grid"
             }
           ]
         }

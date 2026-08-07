@@ -164,6 +164,10 @@
           {
             "name": "Guides",
             "value": "guides"
+          },
+          {
+            "name": "Cards grid",
+            "value": "cards-grid"
           }
         ]
       }
@@ -355,7 +359,8 @@
       {
         "component": "aem-content",
         "name": "reference",
-        "label": "Content Fragment"
+        "label": "Content Fragment",
+        "rootPath": "/content/dam/natwest-xwalk"
       },
       {
         "component": "select",
