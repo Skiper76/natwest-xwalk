@@ -30,7 +30,7 @@ export async function runExperimentation(document, config) {
       // eslint-disable-next-line import/no-relative-packages
       '../plugins/experimentation/src/index.js'
     );
-    return loadEager(document, config);
+    return await loadEager(document, config);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to load experimentation module (eager):', error);
@@ -62,7 +62,7 @@ export async function runExperimentationLazy(document, config) {
       // eslint-disable-next-line import/no-relative-packages
       '../plugins/experimentation/src/index.js'
     );
-    return loadLazy(document, config);
+    return await loadLazy(document, config);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to load experimentation module (lazy):', error);
