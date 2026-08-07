@@ -55,7 +55,7 @@ function renderArticle(article) {
 export default async function decorate(block) {
   const [pathRow, limitRow] = block.children;
   const link = pathRow ? pathRow.querySelector('a[href]') : null;
-  const path = link ? new URL(link.href).pathname : '/articles';
+  const path = link ? new URL(link.href).pathname : '/index/articles';
   const limit = limitRow ? parseInt(limitRow.textContent.trim(), 10) : 0;
   block.textContent = '';
 
