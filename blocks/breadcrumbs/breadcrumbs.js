@@ -20,10 +20,14 @@ export default async function decorate(block) {
   // only display the last two meaningful segments (immediate section + current
   // page). Links still use the full path (including any content-root segment
   // like "index/" that the real site keeps for nested pages), so they resolve
-  // correctly even though only the last two labels are shown.
+  // correctly even though only the last two labels are shown. A leading
+  // "index" segment is the homepage's JCR node name (aliased to "/"), not a
+  // real section, so it never gets a visible crumb of its own even when it
+  // would otherwise fall within the last two segments.
   const cleanPathname = window.location.pathname.replace(/\.html$/, '');
   const allSegments = cleanPathname.split('/').filter(Boolean);
-  const visibleSegments = allSegments.slice(-2);
+  const labelSegments = allSegments[0] === 'index' ? allSegments.slice(1) : allSegments;
+  const visibleSegments = labelSegments.slice(-2);
   const hiddenCount = allSegments.length - visibleSegments.length;
 
   const data = visibleSegments.length ? await fetchIndex() : [];
