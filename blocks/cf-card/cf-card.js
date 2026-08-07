@@ -92,7 +92,9 @@ function renderCard(block, data) {
 export default async function decorate(block) {
   const [refRow, modeRow] = block.children;
   const link = refRow ? refRow.querySelector('a[href]') : null;
-  const path = link ? link.getAttribute('href') : '';
+  // Universal Editor rewrites internal links to end in ".html"; content
+  // fragments live under /content/dam and never have that suffix.
+  const path = link ? link.getAttribute('href').replace(/\.html$/, '') : '';
   const displayMode = (modeRow ? modeRow.textContent.trim().toLowerCase() : 'card') || 'card';
   block.textContent = '';
 
