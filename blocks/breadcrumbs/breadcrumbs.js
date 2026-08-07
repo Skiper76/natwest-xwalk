@@ -17,17 +17,20 @@ export default async function decorate(block) {
   block.textContent = '';
 
   // Strip a trailing .html (present when viewed in the authoring canvas) and
-  // only keep the last two meaningful segments (immediate section + current
-  // page), ignoring any content-root path segments before them.
+  // only display the last two meaningful segments (immediate section + current
+  // page). Links still use the full path (including any content-root segment
+  // like "index/" that the real site keeps for nested pages), so they resolve
+  // correctly even though only the last two labels are shown.
   const cleanPathname = window.location.pathname.replace(/\.html$/, '');
   const allSegments = cleanPathname.split('/').filter(Boolean);
-  const segments = allSegments.slice(-2);
+  const visibleSegments = allSegments.slice(-2);
+  const hiddenCount = allSegments.length - visibleSegments.length;
 
-  const data = segments.length ? await fetchIndex() : [];
+  const data = visibleSegments.length ? await fetchIndex() : [];
 
   const crumbs = [{ path: '/', label: rootLabel }];
-  segments.forEach((segment, index) => {
-    const path = `/${segments.slice(0, index + 1).join('/')}`;
+  visibleSegments.forEach((segment, index) => {
+    const path = `/${allSegments.slice(0, hiddenCount + index + 1).join('/')}`;
     crumbs.push({ path, label: titleForPath(path, data) });
   });
 
