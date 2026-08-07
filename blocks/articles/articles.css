@@ -65,6 +65,8 @@
 
 .articles-card-body h3 {
   margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
 }
 
 .articles-card-body p {
