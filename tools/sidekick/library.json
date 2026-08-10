@@ -3,26 +3,18 @@
     "helix-blocks"
   ],
   "helix-blocks": {
-    "total": 16,
+    "total": 8,
     "offset": 0,
-    "limit": 16,
+    "limit": 8,
     "data": [
-      { "name": "Hero Purple", "path": "/" },
-      { "name": "Cards Icon", "path": "/" },
-      { "name": "Cards Account", "path": "/" },
-      { "name": "Cards Cover", "path": "/index/insurance" },
-      { "name": "Carousel Cards", "path": "/index/first-time-buyers" },
-      { "name": "Quote", "path": "/" },
-      { "name": "Ranking Chart", "path": "/index/bank-accounts" },
-      { "name": "Accordion Help", "path": "/" },
-      { "name": "Accordion Legal", "path": "/index/contact-us" },
-      { "name": "Tabs Tracker", "path": "/" },
-      { "name": "Breadcrumbs", "path": "/index/articles" },
-      { "name": "Article Byline", "path": "/index/articles/managing-your-money" },
-      { "name": "Table Of Contents", "path": "/index/articles/managing-your-money" },
-      { "name": "Search Faq", "path": "/index/contact-us" },
-      { "name": "Articles", "path": "/index/articles" },
-      { "name": "Widget", "path": "/index/mortgage-calculator" }
+      { "name": "Homepage blocks (Hero Purple, Cards Icon, Cards Account, Quote, Accordion Help, Tabs Tracker)", "path": "/" },
+      { "name": "Bank accounts blocks (Ranking Chart, Hero Purple, Cards Account, Accordion Help)", "path": "/index/bank-accounts" },
+      { "name": "Insurance page blocks (Cards Cover, Hero Purple)", "path": "/index/insurance" },
+      { "name": "First-time buyers blocks (Carousel Cards, Hero Purple, Accordion Help)", "path": "/index/first-time-buyers" },
+      { "name": "Contact us blocks (Accordion Legal, Search Faq)", "path": "/index/contact-us" },
+      { "name": "Articles listing blocks (Breadcrumbs, Articles)", "path": "/index/articles" },
+      { "name": "Article page blocks (Article Byline, Table Of Contents, Quote, Breadcrumbs, Articles)", "path": "/index/articles/managing-your-money" },
+      { "name": "Mortgage calculator blocks (Widget, Hero Purple, Cards Icon)", "path": "/index/mortgage-calculator" }
     ]
   },
   ":type": "multi-sheet"
