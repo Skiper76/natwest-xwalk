@@ -7,14 +7,14 @@
     "offset": 0,
     "limit": 8,
     "data": [
-      { "name": "Homepage blocks (Hero Purple, Cards Icon, Cards Account, Quote, Accordion Help, Tabs Tracker)", "path": "/" },
-      { "name": "Bank accounts blocks (Ranking Chart, Hero Purple, Cards Account, Accordion Help)", "path": "/index/bank-accounts" },
-      { "name": "Insurance page blocks (Cards Cover, Hero Purple)", "path": "/index/insurance" },
-      { "name": "First-time buyers blocks (Carousel Cards, Hero Purple, Accordion Help)", "path": "/index/first-time-buyers" },
-      { "name": "Contact us blocks (Accordion Legal, Search Faq)", "path": "/index/contact-us" },
-      { "name": "Articles listing blocks (Breadcrumbs, Articles)", "path": "/index/articles" },
-      { "name": "Article page blocks (Article Byline, Table Of Contents, Quote, Breadcrumbs, Articles)", "path": "/index/articles/managing-your-money" },
-      { "name": "Mortgage calculator blocks (Widget, Hero Purple, Cards Icon)", "path": "/index/mortgage-calculator" }
+      { "name": "Homepage", "path": "/" },
+      { "name": "Bank accounts", "path": "/index/bank-accounts" },
+      { "name": "Insurance", "path": "/index/insurance" },
+      { "name": "First-time buyers", "path": "/index/first-time-buyers" },
+      { "name": "Contact us", "path": "/index/contact-us" },
+      { "name": "Articles list", "path": "/index/articles" },
+      { "name": "Article page", "path": "/index/articles/managing-your-money" },
+      { "name": "Mortgage calculator", "path": "/index/mortgage-calculator" }
     ]
   },
   ":type": "multi-sheet"
