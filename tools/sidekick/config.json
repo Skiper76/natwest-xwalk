@@ -20,6 +20,7 @@
       "id": "library",
       "title": "Library",
       "environments": [
+        "preview",
         "edit"
       ],
       "url": "https://main--natwest-xwalk--skiper76.aem.live/tools/sidekick/library.html",
