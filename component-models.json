@@ -213,18 +213,17 @@
     "id": "article-byline",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "valueType": "string",
         "name": "author",
         "label": "Author",
         "value": ""
       },
       {
-        "component": "richtext",
-        "valueType": "string",
+        "component": "date-time",
+        "valueType": "date",
         "name": "date",
         "label": "Date",
-        "description": "e.g. 3 August 2026",
         "value": ""
       }
     ]
