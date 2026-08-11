@@ -232,11 +232,6 @@
     "id": "articles",
     "fields": [
       {
-        "component": "aem-content",
-        "name": "path",
-        "label": "Articles Path (optional, defaults to /index/articles)"
-      },
-      {
         "component": "text",
         "valueType": "number",
         "name": "limit",

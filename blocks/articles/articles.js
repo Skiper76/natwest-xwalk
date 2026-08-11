@@ -53,10 +53,14 @@ function renderArticle(article) {
 }
 
 export default async function decorate(block) {
-  const [pathRow, limitRow] = block.children;
-  const link = pathRow ? pathRow.querySelector('a[href]') : null;
-  const path = link ? new URL(link.href).pathname : '/index/articles';
-  const limit = limitRow ? parseInt(limitRow.textContent.trim(), 10) : 0;
+  // Only field is "limit" now, but existing content authored before the
+  // path field was removed still has an (unused) path cell before it -
+  // read the last cell so both shapes work.
+  const cells = [...block.children];
+  const limitCell = cells[cells.length - 1];
+  const path = '/index/articles';
+  const limitText = limitCell ? limitCell.textContent.trim() : '';
+  const limit = limitText ? parseInt(limitText, 10) : 0;
   block.textContent = '';
 
   if (limit) {
