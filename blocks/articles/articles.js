@@ -7,6 +7,15 @@ async function fetchIndex(source) {
   return json.data || [];
 }
 
+const DESCRIPTION_MAX_LENGTH = 140;
+
+function truncate(text, maxLength) {
+  if (text.length <= maxLength) return text;
+  const cut = text.slice(0, maxLength);
+  const lastSpace = cut.lastIndexOf(' ');
+  return `${cut.slice(0, lastSpace > 0 ? lastSpace : maxLength).trimEnd()}…`;
+}
+
 function formatDate(lastModified) {
   if (!lastModified) return '';
   return new Date(lastModified * 1000).toLocaleDateString('en-GB', {
@@ -37,7 +46,7 @@ function renderArticle(article) {
   }
   if (article.description) {
     const description = document.createElement('p');
-    description.textContent = article.description;
+    description.textContent = truncate(article.description, DESCRIPTION_MAX_LENGTH);
     body.append(description);
   }
   const date = formatDate(article.lastModified);
