@@ -15,11 +15,11 @@ indices:
         select: head > meta[name="robots"]
         value: attribute(el, "content")
       title:
-        select: head > title
+        select: main h1
         value: textContent(el)
       description:
-        select: head > meta[name="description"]
-        value: attribute(el, "content")
+        select: main p
+        value: textContent(el)
       image:
         select: main img
         value: attribute(el, "src")
