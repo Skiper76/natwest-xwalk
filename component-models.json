@@ -234,11 +234,11 @@
       {
         "component": "aem-content",
         "name": "path",
-        "label": "Articles Path (optional, defaults to /articles)"
+        "label": "Articles Path (optional, defaults to /index/articles)"
       },
       {
-        "component": "richtext",
-        "valueType": "string",
+        "component": "text",
+        "valueType": "number",
         "name": "limit",
         "label": "Limit (optional, e.g. 3 for related articles; blank shows all)",
         "value": ""
