@@ -18,8 +18,8 @@ indices:
         selectFirst: main h1
         value: textContent(el)
       description:
-        selectFirst: head > meta[name="description"]
-        value: attribute(el, "content")
+        selectFirst: main p:not(:has(picture))
+        value: textContent(el)
       image:
         selectFirst: main img
         value: attribute(el, "src")
