@@ -1,5 +1,7 @@
 {
   "project": "AEM XWalk Boilerplate",
+  "host": "main--natwest-xwalk--skiper76.aem.live",
+  "previewHost": "main--natwest-xwalk--skiper76.aem.page",
   "editUrlLabel": "AEM Editor",
   "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
   "plugins": [
