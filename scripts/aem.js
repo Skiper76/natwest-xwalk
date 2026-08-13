@@ -724,6 +724,7 @@ init();
 
 export {
   buildBlock,
+  fetchPlaceholders,
   createOptimizedPicture,
   decorateBlock,
   decorateBlocks,
