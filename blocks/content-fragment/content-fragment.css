@@ -466,3 +466,161 @@
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail.text-right .cftitle::after {
   margin-right: 0;
 }
+
+/* common button css — Primary */
+.cta-button a.button {
+  display: inline-block;
+  padding: 12px 24px !important;
+  margin: 10px 5px;
+  background-color: #5e10b1 !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  border: 2px solid #5e10b1 !important;
+  border-radius: 4px;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.cta-button a.button::after {
+  content: "\f105";
+  font-family: 'Font Awesome 5 Solid';
+  color: #ffffff !important;
+  font-size: 20px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta-button a.button:hover {
+  background-color: transparent !important;
+  color: #5e10b1 !important;
+  border-color: #5e10b1 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.cta-button a.button:hover::after {
+  color: #5e10b1 !important;
+  transform: translateX(2px);
+}
+
+.cta-button a.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button a.button:active::after {
+  transform: translateX(0);
+}
+
+/* Secondary button variant */
+.cta-button-secondary a.button {
+  display: inline-block;
+  padding: 12px 24px !important;
+  margin: 10px 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: translateY(-1px);
+  background-color: transparent;
+  color: #5e10b1 !important;
+  border: 2px solid #5e10b1 !important;
+  border-color: #5e10b1 !important;
+}
+
+.cta-button-secondary a.button::after {
+  content: "\f105";
+  font-family: 'Font Awesome 5 Solid';
+  color: #5e10b1 !important;
+  font-size: 20px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta-button-secondary a.button:hover {
+  background-color: #5e10b1 !important;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.cta-button-secondary a.button:hover::after {
+  color: #ffffff !important;
+  transform: translateX(2px);
+}
+
+/* cta link */
+.button-container.cta-link a:hover {
+  color: #5e10b1 !important;
+}
+.button-container.cta-link a:hover::after {
+  color: #5e10b1 !important;
+}
+.button-container.cta-link {
+  margin-top: 5px !important;
+}
+
+/* dark variant */
+.cta-button-dark a.button {
+  display: inline-block;
+  padding: 12px 24px !important;
+  margin: 10px 5px;
+  background-color: #ffffff !important;
+  color: #3c1053 !important;
+  text-decoration: none;
+  border: 2px solid #3c1053 !important;
+  border-radius: 4px;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.cta-button-dark a.button::after {
+  content: "\f105";
+  font-family: 'Font Awesome 5 Solid';
+  color: #3c1053 !important;
+  font-size: 20px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta-button-dark a.button:hover {
+  background-color: #3c1053 !important;
+  color: #ffffff !important;
+  border-color: #3c1053 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.cta-button-dark a.button:hover::after {
+  color: #ffffff !important;
+  transform: translateX(2px);
+}
+
+.cta-button-dark a.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button-dark a.button:active::after {
+  transform: translateX(0);
+}
