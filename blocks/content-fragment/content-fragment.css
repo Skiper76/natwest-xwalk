@@ -1,8 +1,5 @@
-
-
 .content-fragment-container .content-fragment-wrapper {
   width: 100%;
-  max-width: initial;
   margin: 0 auto;
   display: block;
   height: auto;
@@ -250,14 +247,14 @@
 .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail .cftitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-top .banner-detail .cftitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail .cftitle {
-  color: var(--text-color);
+  color: #3c1053;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail .cfsubtitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail .cfsubtitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-top .banner-detail .cfsubtitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail .cfsubtitle {
-  color: #666;
+  color: #3c1053;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail .cfdescription,
@@ -275,14 +272,14 @@
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail a {
   /* text-align: left; */ 
   /* align-self: flex-start; */
-  color: var(--text-color);
+  color:#5e10b1;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-top .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail a::after {
-  color: var(--text-color);
+  color: #5e10b1;
 }
 
 /* Override text alignment for top/bottom layouts */
