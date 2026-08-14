@@ -543,8 +543,8 @@
 }
 
 .cta-button-secondary a.button::after {
-  content: "\f105";
-  font-family: 'Font Awesome 5 Solid';
+  content: "\203A";      /* › single right-angle quote, looks like the FA chevron */
+  font-family: inherit;
   color: #5e10b1 !important;
   font-size: 20px;
   margin-left: 8px;
