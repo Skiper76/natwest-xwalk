@@ -95,3 +95,107 @@
   font-weight: 700;
   text-decoration: underline;
 }
+
+/* Style: List (horizontal rows) — denser, more titles visible per scroll */
+.articles.list-view .articles-list {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.articles.list-view .articles-list > li > a {
+  flex-direction: row;
+  align-items: center;
+}
+
+.articles.list-view .articles-card-image {
+  flex: 0 0 120px;
+  width: 120px;
+}
+
+.articles.list-view .articles-card-image img {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}
+
+.articles.list-view .articles-card-body {
+  padding: 12px 20px;
+}
+
+@media (width >= 900px) {
+  .articles.list-view .articles-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Style: Minimal — text-only, dense list, no imagery or description */
+.articles.minimal .articles-list {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.articles.minimal .articles-card-image {
+  display: none;
+}
+
+.articles.minimal .articles-list > li {
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 1px solid var(--light-color);
+}
+
+.articles.minimal .articles-card-body {
+  padding: 16px 0;
+}
+
+.articles.minimal .articles-card-body h3 {
+  font-size: var(--body-font-size-m);
+}
+
+.articles.minimal .articles-card-body p:not(.articles-card-date) {
+  display: none;
+}
+
+/* Style: Featured — first article as a large lead story, rest stay compact */
+.articles.featured .articles-list {
+  grid-template-columns: 1fr;
+}
+
+.articles.featured .articles-list > li:first-child {
+  grid-column: 1 / -1;
+}
+
+.articles.featured .articles-list > li:first-child .articles-card-image img {
+  aspect-ratio: 21 / 9;
+}
+
+.articles.featured .articles-list > li:first-child .articles-card-body h3 {
+  font-size: 28px;
+}
+
+@media (width >= 600px) {
+  .articles.featured .articles-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .articles.featured .articles-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Style: CTA — explicit call-to-action link on every card */
+.articles.cta .articles-card-body {
+  position: relative;
+  padding-bottom: 56px;
+}
+
+.articles.cta .articles-list > li > a::after {
+  content: "Read article \2192";
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--link-color);
+}

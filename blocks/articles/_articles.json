@@ -26,6 +26,35 @@
           "name": "limit",
           "label": "Limit (optional, e.g. 3 for related articles; blank shows all)",
           "value": ""
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "value": "",
+          "label": "Style",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Default (grid cards)",
+              "value": ""
+            },
+            {
+              "name": "List (horizontal rows)",
+              "value": "list-view"
+            },
+            {
+              "name": "Featured (large lead story)",
+              "value": "featured"
+            },
+            {
+              "name": "Minimal (text-only, dense)",
+              "value": "minimal"
+            },
+            {
+              "name": "CTA (explicit read link)",
+              "value": "cta"
+            }
+          ]
         }
       ]
     }
